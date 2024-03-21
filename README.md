@@ -1,3 +1,5 @@
+explanations on how it works in the comments //
+
 # Next.js vs Express.js
 
 ### Next.js built-in support for SSR
