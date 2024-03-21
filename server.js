@@ -4,7 +4,6 @@ require('@babel/register')({
   extensions: ['.js', '.jsx']
 });
 require('ignore-styles');
-require('./server'); 
 
 // server config
 const express = require('express');
