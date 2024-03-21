@@ -1,4 +1,5 @@
-<p>*see the code comments // for explanations on how it works*</p>
+<p>see the code comments // for explanations on how it works</p>
+
 ----
 
 # Next.js vs Express.js
