@@ -1,21 +1,31 @@
-// to deal with commonJS in Express and React modules files transpiling
+// Transpiling CommonJS modules in Express and React files using Babel
+// Necessary to prevent errors with JS modules syntax 
 require('@babel/register')({
   presets: ['@babel/preset-env', '@babel/preset-react'],
   extensions: ['.js', '.jsx']
 });
+// Ignore CSS imports during server-side rendering to avoid potential issues
 require('ignore-styles');
+
+// Import modules required for rendering React components on the server before hydration
+const ReactDOMServer = require('react-dom/server');
+const React = require('react');
+const {SmallCompo} = require('./src/components/SmallCompo.jsx'); 
+
 
 // server config
 const express = require('express');
-const ReactDOMServer = require('react-dom/server');
-const React = require('react');
-const {SmallCompo} = require('./src/components/SmallCompo.jsx');
-
 const app = express();
 
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
+
+  // Render the SmallCompo component to a string
+  // In SSR, the initial HTML content needs to be generated on the server and sent to the client. 
+  // React components cannot be directly sent over HTTP because they are JavaScript objects. 
+  // Instead, they need to be converted into HTML strings.
+  // Until the future hydration, the page will be complete in terms of content but static
     const componentStr = ReactDOMServer.renderToString(React.createElement(SmallCompo));
 
     res.send(`
@@ -33,7 +43,4 @@ app.get('/', (req, res) => {
   `);
 });
 
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}/`);
-});
+app.listen(3000);
