@@ -1,5 +1,5 @@
 # React Server-Side Rendering  
-Comparison: Next.js vs Express
+<br> Comparison: Next.js vs Express
 
 ### Next.js built-in support for SSR
 
