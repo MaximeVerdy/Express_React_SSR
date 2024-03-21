@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
       <div id="root">${componentStr}</div>
+      <!-- contains client-side JavaScript code responsible for hydration. -->
       <script src="/bundled-client.js"></script>
     </body>
     </html>
