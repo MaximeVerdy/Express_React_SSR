@@ -1,4 +1,5 @@
-explanations on how it works in the comments //
+see the comments // for explanations on how it works
+
 
 # Next.js vs Express.js
 
