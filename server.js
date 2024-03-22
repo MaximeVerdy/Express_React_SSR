@@ -1,4 +1,4 @@
-// Babel is used to Transpile Express modules and React modules 
+// Babel is used to Transpile Express modules and React components 
 // into a compatible format that can be executed by the targeted JavaScript runtime environment.
 require('@babel/register')({
   presets: ['@babel/preset-env', '@babel/preset-react'],
