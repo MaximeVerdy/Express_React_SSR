@@ -1,5 +1,5 @@
-// Transpiling CommonJS modules in Express and React files using Babel
-// Necessary to prevent errors with JS modules syntax ('import', etc)
+// Babel is used to Transpile Express modules and React modules 
+// into a compatible format that can be executed by the targeted JavaScript runtime environment.
 require('@babel/register')({
   presets: ['@babel/preset-env', '@babel/preset-react'],
   extensions: ['.js', '.jsx']
