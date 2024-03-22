@@ -1,10 +1,10 @@
-// Babel is used to Transpile Express modules and React modules 
-// into a compatible format that can be executed by the targeted JavaScript runtime environment.
+// Transpiling CommonJS modules in Express and React files using Babel
+// Necessary to prevent errors with JS modules syntax ('import', etc)
 require('@babel/register')({
   presets: ['@babel/preset-env', '@babel/preset-react'],
   extensions: ['.js', '.jsx']
 });
-// Ignore CSS imports during server-side rendering to avoid potential issues
+// Ignore CSS imports during server-side rendering to avoid potential issues (double rendering: server side & client side)
 require('ignore-styles');
 
 // Import modules required for rendering React components on the server before hydration
