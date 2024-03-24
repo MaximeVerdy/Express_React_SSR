@@ -1,4 +1,4 @@
-<p>see the code comments // for explanations on how SSR works</p>
+_see the code comments // for explanations on how SSR works_
 
 ----
 
