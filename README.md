@@ -1,4 +1,4 @@
-_see the code comments // for explanations on how SSR works_
+_see the code comments in `server.js` and `client.js` for explanations on how SSR works_
 
 ----
 
