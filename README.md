@@ -1,4 +1,5 @@
-_See the code comments in `server.js` and `client.js` for explanations on how SSR works. As it is a learning project, the quantity of comments is unusually high._
+_See the code comments in `server.js` and `client.js` for explanations on how SSR works.  
+As it is a learning project, the quantity of comments is unusually high._
 
 ----
 
